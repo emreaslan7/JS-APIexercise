@@ -1,0 +1,76 @@
+:root{
+    --bg-main : linear-gradient(180deg, #6059f7,#36c3fe);
+    --black : #3d3d3d;
+    --blue-dark : #6059f7;
+    --blue : #6592fe;
+    --blue-light : #36c3fe;
+    --purple : #8c61ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+}
+li{
+    list-style-type: none;
+}
+i{
+    color: #adadad;
+    font-size: 20px;
+}
+body{
+    background: var(--bg-main);
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    padding: 30px;
+    width: 700px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.input-translate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-translate textarea{
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    height: 250px;
+    width: 100%;
+    outline: none;
+    resize: none;
+    background: none;
+
+}
+.input-translate .from-text{
+    border-right: 1px solid #ccc;
+}
+.wrapper ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper ul .row-from{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper ul .row-to{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
