@@ -1,0 +1,17 @@
+{
+  "name": "OwnJSONserver-employee",
+  "version": "1.0.0",
+  "description": "This is a employee project with using REST-API JSON server and ES6 Modules",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "This is a test"
+  },
+  "keywords": [
+    "employee",
+    "project"
+  ],
+  "author": "Emre Aslan",
+  "license": "ISC",
+  "devDependencies": {
+  }
+}
