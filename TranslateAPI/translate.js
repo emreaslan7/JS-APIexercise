@@ -7,20 +7,21 @@ const rowFrom = document.querySelector('.row-from');
 const rowTo = document.querySelector('.row-to');
 
 selectTag.forEach(select =>{
-    for(const countryCode in countries){
+    for(const countrywCode in countries){
         // create language option
         let langoption = document.createElement('option');
-        langoption.value = `${countryCode}`;
-        langoption.innerHTML = `${countries[countryCode]}`;
+        langoption.value = `${countrywCode}`;
+        langoption.innerHTML = `${countries[countrywCode]}`;
         select.appendChild(langoption);
 
         // default language select
-        if((select.className == "select-from" && countryCode == 'en-GB') || (select.className == "select-to" && countryCode == 'tr-TR')){
+        if((select.className == "select-from" && countrywCode == 'en-GB') || (select.className == "select-to" && countrywCode == 'tr-TR')){
             langoption.setAttribute(`selected`,'');
         }
     }
 })
 
+//translate event
 translateBtn.addEventListener('click', async() =>{
     let text = TextFrom.value;
     let translateFrom = selectTag[0].value;
@@ -35,6 +36,7 @@ translateBtn.addEventListener('click', async() =>{
 })
 
 control.addEventListener('click',(e) =>{
+    // exchange language
     if(e.target.classList.contains('fa-arrow-right-arrow-left')){
         let temptext = TextFrom.value;
         TextFrom.value = TextTo.value;
@@ -43,6 +45,8 @@ control.addEventListener('click',(e) =>{
         selectTag[0].value = selectTag[1].value;
         selectTag[1].value = tempselect;   
     }
+
+    // copy text
     else if(e.target.classList.contains('copy-from')){
         rowFrom.classList.add('active');
         setTimeout(()=>{
