@@ -2,9 +2,27 @@
   "employees": [
     {
       "name": "Ahmet",
-      "departmant": "Marketing",
+      "department": "Marketing",
       "salary": 2000,
       "id": 1
+    },
+    {
+      "name": "Emre",
+      "department": "Worker",
+      "salary": 1200,
+      "id": 2
+    },
+    {
+      "name": "James",
+      "department": "Cooker",
+      "salary": 2000,
+      "id": 3
+    },
+    {
+      "name": "Emre Aslan",
+      "department": "sa",
+      "salary": 656,
+      "id": 4
     }
   ]
 }
