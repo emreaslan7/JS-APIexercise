@@ -33,4 +33,18 @@ export class UI{
             <td> <a href="#" id = "delete-employee" class= "btn btn-danger">Delete</a></td>
         </tr>`
     }
+
+    FromListToForm(e){
+        this.btnUpdate.style.display = 'block';
+        this.inputName.value = e.target.parentElement.parentElement.children[0].textContent;
+        this.inputDepartment.value = e.target.parentElement.parentElement.children[1].textContent;
+        this.inputSalary.value = e.target.parentElement.parentElement.children[2].textContent;
+        return e.target.parentElement.parentElement.children[3].textContent;
+    }
+
+    ClearInputs(){
+        this.inputName.value = "";
+        this.inputDepartment.value = "";
+        this.inputSalary.value = "";
+    }
 }

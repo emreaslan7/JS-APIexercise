@@ -19,10 +19,9 @@ eventListeners();
 
 function eventListeners(){
     document.addEventListener('DOMContentLoaded',GetAllEmployees);
-    document.addEventListener('submit',AddNewEmployee);
-    
+    form.addEventListener('submit',AddNewEmployee);
+    ui.employeeList.addEventListener('click',UpdateorDelete);
 }
-
 
 function GetAllEmployees(){
     request.GET()
@@ -35,6 +34,31 @@ function AddNewEmployee(){
         name: ui.inputName.value,
         department : ui.inputDepartment.value,
         salary: Number(ui.inputSalary.value)})
-    .then(response => ui.AddNewEmployeetoUI(response))
+    .then(response => {
+        ui.AddNewEmployeetoUI(response);
+        ui.ClearInputs();
+    })
     .catch(err => new Error(err));
+    e.preventDefault();
+}
+
+function UpdateorDelete(e){
+    
+    if(e.target.id == 'update-employee'){
+
+        const employeeid = ui.FromListToForm(e);
+
+        ui.btnUpdate.addEventListener('click', ()=>{
+        request.PUT(employeeid,{
+            name: ui.inputName.value,
+            department : ui.inputDepartment.value,
+            salary: Number(ui.inputSalary.value)})
+        }).then(response => window.location.reload())
+
+    }if(e.target.id == 'delete-employee'){
+        const employeeid = ui.FromListToForm(e);
+        request.DELETE(employeeid).then(response => window.location.reload())
+        ui.ClearInputs();
+    }
+    
 }

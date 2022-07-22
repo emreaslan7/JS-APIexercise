@@ -1,9 +1,9 @@
 {
   "employees": [
     {
-      "name": "Ahmet",
-      "department": "Marketing",
-      "salary": 2000,
+      "name": "Stefan",
+      "department": "developer",
+      "salary": 4500,
       "id": 1
     },
     {
@@ -13,9 +13,9 @@
       "id": 2
     },
     {
-      "name": "James",
-      "department": "Cooker",
-      "salary": 2000,
+      "name": "Leo",
+      "department": "developer",
+      "salary": 5000,
       "id": 3
     },
     {
@@ -23,6 +23,18 @@
       "department": "sa",
       "salary": 656,
       "id": 4
+    },
+    {
+      "name": "George",
+      "department": "Boss",
+      "salary": 122222,
+      "id": 6
+    },
+    {
+      "name": "Cristiano",
+      "department": "Driver",
+      "salary": 1000,
+      "id": 9
     }
   ]
 }
