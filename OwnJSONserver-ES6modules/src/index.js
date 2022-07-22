@@ -6,15 +6,6 @@ const ui = new UI();
 
 const form = document.querySelector('#employee-form');
 
-
-// request.PUT(1,{name: 'Aslan',departmant: 'developer',salary : 5000})
-// .then(response => console.log(response))
-// .catch(err => new Error(err));
-
-// request.DELETE(1)
-// .then(response => console.log(response))
-// .catch(err => new Error(err));
-
 eventListeners();
 
 function eventListeners(){
@@ -53,11 +44,11 @@ function UpdateorDelete(e){
             name: ui.inputName.value,
             department : ui.inputDepartment.value,
             salary: Number(ui.inputSalary.value)})
-        }).then(response => window.location.reload())
+        })
 
     }if(e.target.id == 'delete-employee'){
         const employeeid = ui.FromListToForm(e);
-        request.DELETE(employeeid).then(response => window.location.reload())
+        request.DELETE(employeeid)
         ui.ClearInputs();
     }
     
